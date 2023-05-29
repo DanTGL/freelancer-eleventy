@@ -1,0 +1,23 @@
+// 
+// Styles
+// 
+
+// Import custom variables and override default Bootstrap variables
+@import "./scss/variables.scss";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap.scss";
+
+// Import custom styles
+@import "./scss/global.scss";
+
+// Components
+@import "./scss/components/divider.scss";
+@import "./scss/components/buttons.scss";
+@import "./scss/components/navbar.scss";
+@import "./scss/components/forms.scss";
+
+// Sections
+@import "./scss/sections/masthead.scss";
+@import "./scss/sections/portfolio.scss";
+@import "./scss/sections/footer.scss";
