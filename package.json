@@ -1,18 +1,12 @@
 {
     "title": "Freelancer",
-    "name": "startbootstrap-freelancer",
+    "name": "freelancer-eleventy",
     "version": "7.0.7",
     "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
-        "build:assets": "node scripts/build-assets.js",
-        "build:pug": "node scripts/build-pug.js",
-        "build:scripts": "node scripts/build-scripts.js",
-        "build:scss": "node scripts/build-scss.js",
-        "clean": "node scripts/clean.js",
-        "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "build": "npx @11ty/eleventy",
+        "serve": "npx @11ty/eleventy --serve"
     },
-    "description": "A freelancer portfolio HTML theme for Bootstrap.",
+    "description": "A freelancer portfolio HTML theme for Bootstrap using eleventy.",
     "keywords": [
         "css",
         "sass",
@@ -21,16 +15,18 @@
         "pug",
         "responsive",
         "theme",
-        "template"
+        "template",
+        "eleventy"
     ],
-    "homepage": "https://startbootstrap.com/theme/freelancer",
+    "homepage": "https://github.com/DanTGL/freelancer-eleventy",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-freelancer/issues",
+        "url": "https://github.com/DanTGL/freelancer-eleventy/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "DanTGL",
     "contributors": [
+        "DanTGL (https://github.com/DanTGL)",
         "David Miller (https://davidmiller.io/)"
     ],
     "repository": {
@@ -41,15 +37,7 @@
         "bootstrap": "5.2.3"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.14",
-        "browser-sync": "2.29.1",
-        "chokidar": "3.5.3",
-        "concurrently": "6.3.0",
-        "postcss": "8.4.21",
-        "prettier": "2.8.6",
-        "pug": "3.0.2",
-        "sass": "1.60.0",
-        "shelljs": "0.8.5",
-        "upath": "2.0.1"
+        "@11ty/eleventy": "^2.0.1",
+        "sass": "^1.62.1"
     }
 }

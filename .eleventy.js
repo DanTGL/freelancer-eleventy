@@ -5,6 +5,8 @@ const path = require("node:path");
 module.exports = function(eleventyConfig) {
   eleventyConfig.addTemplateFormats("scss", "pug");
   
+  eleventyConfig.addPassthroughCopy("site/assets");
+
   // Creates the extension for use
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css", // optional, default: "html"
