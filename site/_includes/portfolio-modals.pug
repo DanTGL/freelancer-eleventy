@@ -1,6 +1,5 @@
 each post in collections.post
-    // Portfolio Modal 1
-    #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1', aria-labelledby='portfolioModal1', aria-hidden='true')
+    .portfolio-modal.modal.fade(tabindex='-1', aria-labelledby=post.data.modalId, aria-hidden='true', id=post.data.modalId)
         .modal-dialog.modal-xl
             .modal-content
                 .modal-header.border-0
@@ -10,7 +9,7 @@ each post in collections.post
                         .row.justify-content-center
                             .col-lg-8
                                 // Portfolio Modal - Title
-                                h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0= post.title
+                                h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0= post.data.title
                                 // Icon Divider
                                 .divider-custom
                                     .divider-custom-line
@@ -18,9 +17,9 @@ each post in collections.post
                                         i.fas.fa-star
                                     .divider-custom-line
                                 // Portfolio Modal - Image
-                                img.img-fluid.rounded.mb-5(src= post.img, alt='...')
+                                img.img-fluid.rounded.mb-5(src=post.data.img, alt='...')
                                 // Portfolio Modal - Text
-                                p.mb-4= post.content
+                                p.mb-4 !{post.content}
                                 button.btn.btn-primary(data-bs-dismiss='modal')
                                     i.fas.fa-xmark.fa-fw
                                     | Close Window

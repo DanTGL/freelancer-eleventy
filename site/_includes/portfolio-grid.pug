@@ -1,0 +1,11 @@
+// Portfolio Grid Items
+.row.justify-content-center
+    - var len = collections.post.length
+    each post, idx in collections.post
+        // Portfolio Item 1
+        .col-md-6.col-lg-4(class=idx != len - 1 ? ["mb-5", idx >= len - 3 ? "mb-lg-0" : ""] : "")
+            .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target=`#${post.data.modalId}`)
+                .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                    .portfolio-item-caption-content.text-center.text-white
+                        i.fas.fa-plus.fa-3x
+                img.img-fluid(src=post.data.img, alt='...')
